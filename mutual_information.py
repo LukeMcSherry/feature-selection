@@ -33,6 +33,6 @@ probability_class_malware = TOTAL_MALWARE_SAMPLES / TOTAL_SAMPLES
 
 probability_class_benign = TOTAL_BENIGN_SAMPLES / TOTAL_SAMPLES
 
-feature_rank_score = (probability_does_not_occur * ((benign_probability_does_not_occur * log2((benign_probability_does_not_occur / probability_class_benign))) + (malicious_probability_does_not_occur * log2((malicious_probability_does_not_occur / probability_class_malware))))) + (probability_occurs * ((benign_probability_occurs * (log2((benign_probability_occurs / probability_class_benign)))) + (malicious_probability_occurs * (log2((malicious_probability_occurs / probability_class_malware))))))
+mutual_information_score = (probability_does_not_occur * ((benign_probability_does_not_occur * log2((benign_probability_does_not_occur / probability_class_benign))) + (malicious_probability_does_not_occur * log2((malicious_probability_does_not_occur / probability_class_malware))))) + (probability_occurs * ((benign_probability_occurs * (log2((benign_probability_occurs / probability_class_benign)))) + (malicious_probability_occurs * (log2((malicious_probability_occurs / probability_class_malware))))))
 
-print("\nThe Mutual Information Score of {} is {}".format(FEATURE, feature_rank_score))
+print("\nThe Mutual Information Score of {} is {}".format(FEATURE, mutual_information_score))
